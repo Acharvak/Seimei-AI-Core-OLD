@@ -16,6 +16,10 @@ list(REMOVE_AT CMAKE_EXTRA_GENERATOR_CXX_SYSTEM_DEFINED_MACROS ${idx})
 list(INSERT CMAKE_EXTRA_GENERATOR_CXX_SYSTEM_DEFINED_MACROS ${idx} 201703L)
 set(CMAKE_EXTRA_GENERATOR_CXX_SYSTEM_DEFINED_MACROS "${CMAKE_EXTRA_GENERATOR_CXX_SYSTEM_DEFINED_MACROS}" CACHE INTERNAL "" FORCE)
 
+# FIXME
+if(NOT BLAS_ROOT)
+message(FATAL_ERROR "Please manually set -D BLAS_ROOT=/path/to/openblas")
+endif(NOT BLAS_ROOT)
 
 # Searching for third-party libraries
 find_package(BLAS REQUIRED)    # Set BLAS_ROOT to override
@@ -31,7 +35,7 @@ include_directories(seimei/src)
 include_directories(SYSTEM libPShowdown/include)
 
 # FIXME: this should be done properly, but FindBLAS doesn't make it easy
-include_directories(/home/fedor/Programs/seimei-env/include)
+include_directories("${BLAS_ROOT}/include")
 
 # FIXME: this should be done properly
 include_directories(/usr/include/hdf5/serial)
