@@ -1,0 +1,4 @@
+[submodule "googletest"]
+	path = lib/googletest
+	url = https://github.com/google/googletest
+	branch = origin/v1.10.x
