@@ -357,11 +357,11 @@ inline int calculateHiddenPowerPower(int generation, const Stats& preHyperIV) {
 	}
 }
 
-inline Stats::Stats(bool) :
+inline Stats::Stats(bool) noexcept :
 		Stats(-1, -1, -1, -1, -1, -1) {
 }
 
-inline Stats::Stats(int hp, int attack, int defense, int special_attack, int special_defense, int speed) :
+inline Stats::Stats(int hp, int attack, int defense, int special_attack, int special_defense, int speed) noexcept :
 		HP(hp), attack(attack), defense(defense), specialAttack(special_attack), specialDefense(special_defense), speed(
 				speed) {
 }
