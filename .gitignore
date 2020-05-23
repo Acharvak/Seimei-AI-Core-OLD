@@ -1,0 +1,17 @@
+# CMake stuff
+/CMakeFiles/
+/CMakeCache.txt
+/*.cmake
+/Testing/
+
+# Popular build systems
+/Makefile
+/*.ninja
+/.ninja_*
+
+# Build artifacts
+/build/
+/bin/
+/serialize-battle
+/test_*
+*.[oa]
