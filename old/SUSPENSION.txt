@@ -1,0 +1,1 @@
+libPShowdown.tar.xz contains some initial development of a library to communicate with Pokémon Showdown servers. It has been suspended in favor of splitting the project a Seimei Core server (doing only calculations) and a Seimei Client (connecting to a Showdown server and a Seimei Core server), with the Client being written in node.js.

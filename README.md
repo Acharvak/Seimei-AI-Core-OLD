@@ -1,6 +1,6 @@
-This is a planned neural-network based bot for [Pokémon Showdown!](https://pokemonshowdown.com/)
+This is a planned neural-network based bot for [Pokémon Showdown!](https://pokemonshowdown.com/) - Core server
 
-Doesn't quite play Pokémon yet. The neural network does pass generalized tests. Work is currently being done on handling the Showdown protocol (libPShowdown).
+Doesn't quite play Pokémon yet. The neural network does pass generalized tests. This program (Seimei Core) will act as a neural network server only, a separate program (likely in node.js) will act as a client for Showdown.
 
 Also includes:
 

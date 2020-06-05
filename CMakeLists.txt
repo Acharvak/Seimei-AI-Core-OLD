@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(Seimei LANGUAGES CXX)
+project(Seimei-Core LANGUAGES CXX)
 
 # Settings should later be made more easily configurable
 set(ENABLE_TESTS TRUE)
@@ -34,7 +34,6 @@ endif(ENABLE_TESTS)
 include_directories(SYSTEM lib/nlohmann-json/single_include)
 
 include_directories(seimei/src)
-include_directories(SYSTEM libPShowdown/include)
 
 # FIXME: this should be done properly, but FindBLAS doesn't make it easy
 include_directories("${BLAS_ROOT}/include")
@@ -51,5 +50,3 @@ if(ENABLE_TESTS)
     target_link_libraries(test_nnet-quick gtest_main ${BLAS_LIBRARIES} ${BLAS_LINKER_FLAGS})
     target_link_libraries(test_nnet-iris gtest_main ${BLAS_LIBRARIES} ${BLAS_LINKER_FLAGS})
 endif(ENABLE_TESTS)
-
-add_executable(serialize-battle temp/serialize-battle.cpp)
